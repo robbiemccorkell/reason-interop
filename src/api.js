@@ -6,9 +6,9 @@ export const getTopStoryIds = async (count = 10) => {
   return ids.slice(0, count);
 };
 
-export const getTopStoryById = async id => {
+export const getTopStoryById = async (id) => {
   const response = await fetch(
     `https://hacker-news.firebaseio.com/v0/item/${id}.json`,
   );
-  return await response.json();
-}
+  return response.json();
+};

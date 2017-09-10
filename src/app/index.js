@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   stories: state.stories,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = () => ({
   getTopStories,
 });
 
