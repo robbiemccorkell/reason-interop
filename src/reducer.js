@@ -1,12 +1,21 @@
+import { RECIEVE_TOP_STORIES } from './actions';
+
 const initialState = {
-  greeting: 'Hello redux',
-  posts: []
-}
+  stories: [],
+};
 
 export default (state, action) => {
   if (typeof state === 'undefined') {
-    return initialState
+    return initialState;
   }
 
-  return state
-}
+  switch (action.type) {
+    case RECIEVE_TOP_STORIES:
+      return {
+        ...state,
+        stories: action.payload.stories,
+      }
+    default:
+      return state;
+  }
+};
