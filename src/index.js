@@ -4,7 +4,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import rootReducer from './reducer';
-import { getTopStories } from './actions';
 import App from './app';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -15,5 +14,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('index'),
 );
-
-store.dispatch(getTopStories());

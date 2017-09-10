@@ -6,8 +6,8 @@ const mapStateToProps = state => ({
   stories: state.stories,
 });
 
-const mapDispatchToProps = () => ({
+const mapDispatchToProps = {
   getTopStories,
-});
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
