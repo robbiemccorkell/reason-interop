@@ -25,7 +25,7 @@ class App extends Component {
     const { stories } = this.props;
     return (
       <div>
-        <Header />
+        <Header>{'Reason React Hacker News'}</Header>
         <ul>
           {stories.map(({ id, title, url }) => (
             <li key={id}>

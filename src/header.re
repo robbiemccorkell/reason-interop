@@ -1,9 +1,10 @@
 let component = ReasonReact.statelessComponent "Header";
 
-let make _children => {
+let make children => {
   ...component,
-  render: fun _self =>
-    <div> (ReasonReact.stringToElement "React Reason Hacker News") </div>
+  render: fun _self => <div> (ReasonReact.arrayToElement children) </div>
 };
 
-let comp = ReasonReact.wrapReasonForJs ::component (fun _ => make [||]);
+let comp =
+  ReasonReact.wrapReasonForJs
+    ::component (fun jsProps => make jsProps##children);

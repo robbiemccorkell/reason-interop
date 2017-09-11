@@ -2,7 +2,9 @@
 
 exports[`App component renders stories 1`] = `
 <div>
-  <Header />
+  <Header>
+    Reason React Hacker News
+  </Header>
   <ul>
     <li>
       <a
