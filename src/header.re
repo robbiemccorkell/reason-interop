@@ -6,4 +6,4 @@ let make _children => {
     <div> (ReasonReact.stringToElement "React Reason Hacker News") </div>
 };
 
-let comp = ReasonReact.wrapReasonForJs ::component (fun _ => make [||]);
+let default = ReasonReact.wrapReasonForJs ::component (fun _ => make [||]);
