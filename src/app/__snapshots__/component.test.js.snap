@@ -2,6 +2,7 @@
 
 exports[`App component renders stories 1`] = `
 <div>
+  <Header />
   <ul>
     <li>
       <a

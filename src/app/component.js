@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../../lib/es6/src/header';
+import { comp as Header } from '../../lib/js/src/header';
 
 const getStoryUrl = (id, url) =>
   url || `https://news.ycombinator.com/item?id=${id}`;

@@ -1,4 +1,5 @@
-lib
+lib/bs
+lib/es6
 node_modules
 .merlin
 npm-debug.log
