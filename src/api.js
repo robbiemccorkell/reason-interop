@@ -1,14 +1,6 @@
-export const getTopStoryIds = async (count = 10) => {
-  const response = await fetch(
-    'https://hacker-news.firebaseio.com/v0/topstories.json',
-  );
-  const ids = await response.json();
-  return ids.slice(0, count);
-};
+const baseUrl = 'https://serverless-api.hackernewsmobile.com';
 
-export const getTopStoryById = async (id) => {
-  const response = await fetch(
-    `https://hacker-news.firebaseio.com/v0/item/${id}.json`,
-  );
+export const getTopStories = async (page = 0, count = 25) => {
+  const response = await fetch(`${baseUrl}/topstories-${count}-${page}.json`);
   return response.json();
 };

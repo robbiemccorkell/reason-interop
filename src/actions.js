@@ -1,4 +1,4 @@
-import { getTopStoryIds, getTopStoryById } from './api';
+import { getTopStories as getApiTopStories } from './api';
 
 export const RECIEVE_TOP_STORIES = 'RECIEVE_TOP_STORIES';
 
@@ -10,8 +10,7 @@ export const receiveTopStories = stories => ({
 });
 
 export const getTopStories = () => async (dispatch) => {
-  const topStoryIds = await getTopStoryIds();
-  const topStories = await Promise.all(topStoryIds.map(getTopStoryById));
+  const topStories = await getApiTopStories();
 
   dispatch(receiveTopStories(topStories));
 };

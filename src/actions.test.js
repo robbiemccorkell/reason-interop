@@ -1,10 +1,7 @@
 import { receiveTopStories, getTopStories } from './actions';
 
 jest.mock('./api', () => ({
-  getTopStoryIds: () => [1],
-  getTopStoryById: id => ({
-    id,
-  }),
+  getTopStories: () => [{ id: 1 }],
 }));
 
 describe('receiveTopStories', () => {

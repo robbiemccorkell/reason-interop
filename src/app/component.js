@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+const getStoryUrl = (id, url) =>
+  url || `https://news.ycombinator.com/item?id=${id}`;
+
 class App extends Component {
   static propTypes = {
     getTopStories: PropTypes.func.isRequired,
@@ -8,7 +11,7 @@ class App extends Component {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
+        url: PropTypes.string,
       }),
     ).isRequired,
   };
@@ -24,7 +27,7 @@ class App extends Component {
         <ul>
           {stories.map(({ id, title, url }) => (
             <li key={id}>
-              <a href={url}>{title}</a>
+              <a href={getStoryUrl(id, url)}>{title}</a>
             </li>
           ))}
         </ul>
