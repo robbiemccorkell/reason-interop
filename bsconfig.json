@@ -8,7 +8,9 @@
     "-bs-super-errors"
   ],
   "bs-dependencies": [
-    "reason-react"
+    "reason-react",
+    "bs-jest",
+    "bs-enzyme"
   ],
   "sources": "src"
 }

@@ -8,13 +8,31 @@
     "test": "jest",
     "lint": "eslint --cache .",
     "start": "bsb -make-world -w",
-    "build": "bsb -make-world" ,
+    "build": "bsb -make-world",
     "webpack": "webpack -w",
     "clean": "bsb -clean-world"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/*test.{ml,re,js}"
+    ],
+    "moduleFileExtensions": [
+      "re",
+      "ml",
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.(re|ml)$": "bs-loader"
+    }
+  },
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.4.2",
@@ -32,6 +50,9 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bs-enzyme": "^0.2.0",
+    "bs-jest": "^0.1.0",
+    "bs-loader": "^1.7.1",
     "bs-platform": "^1.9.1",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
@@ -41,7 +62,6 @@
     "eslint-plugin-jest": "^21.0.2",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
-    "jest": "^21.0.2",
     "react-test-renderer": "^15.6.1",
     "webpack": "^3.5.6"
   }
