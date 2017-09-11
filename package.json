@@ -7,7 +7,10 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint --cache .",
-    "webpack": "webpack -w"
+    "start": "bsb -make-world -w",
+    "build": "bsb -make-world" ,
+    "webpack": "webpack -w",
+    "clean": "bsb -clean-world"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +32,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bs-platform": "^1.9.1",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^4.6.1",

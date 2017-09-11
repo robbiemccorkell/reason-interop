@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Header from '../../lib/es6/src/header';
 
 const getStoryUrl = (id, url) =>
   url || `https://news.ycombinator.com/item?id=${id}`;
@@ -24,6 +25,7 @@ class App extends Component {
     const { stories } = this.props;
     return (
       <div>
+        <Header />
         <ul>
           {stories.map(({ id, title, url }) => (
             <li key={id}>

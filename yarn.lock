@@ -1100,6 +1100,10 @@ browserslist@^2.1.2:
     caniuse-lite "^1.0.30000718"
     electron-to-chromium "^1.3.18"
 
+bs-platform@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-1.9.1.tgz#1195562f0f8b131cc758693e7c9b31d7e0022001"
+
 bser@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
