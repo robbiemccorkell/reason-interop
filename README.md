@@ -23,7 +23,9 @@ Then simply open `src/index.html` in your browser.
 
 
 ### Test
+To run the tests any reason files must first be compiled to javascript:
 ```
+yarn build
 yarn test
 ```
 
