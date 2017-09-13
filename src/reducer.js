@@ -1,4 +1,4 @@
-import { RECIEVE_TOP_STORIES } from './actions';
+import { RECEIVE_TOP_STORIES } from './actions';
 
 const initialState = {
   stories: [],
@@ -10,7 +10,7 @@ export default (state, action) => {
   }
 
   switch (action.type) {
-    case RECIEVE_TOP_STORIES:
+    case RECEIVE_TOP_STORIES:
       return {
         ...state,
         stories: action.payload.stories,

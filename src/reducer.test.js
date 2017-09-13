@@ -1,5 +1,5 @@
 import reducer from './reducer';
-import { RECIEVE_TOP_STORIES } from './actions';
+import { RECEIVE_TOP_STORIES } from './actions';
 
 describe('reducer', () => {
   it('returns initial state when state is undefined', () => {
@@ -17,13 +17,13 @@ describe('reducer', () => {
     expect(state).toEqual(initialState);
   });
 
-  it('adds stories to state on RECIEVE_TOP_STORIES', () => {
+  it('adds stories to state on RECEIVE_TOP_STORIES', () => {
     const initialState = {
       stories: [{ id: 1 }],
     };
     const newStories = [{ id: 1 }, { id: 2 }];
     const state = reducer(initialState, {
-      type: RECIEVE_TOP_STORIES,
+      type: RECEIVE_TOP_STORIES,
       payload: {
         stories: newStories,
       },

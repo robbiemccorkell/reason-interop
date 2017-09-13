@@ -1,9 +1,9 @@
 import { getTopStories as getApiTopStories } from './api';
 
-export const RECIEVE_TOP_STORIES = 'RECIEVE_TOP_STORIES';
+export const RECEIVE_TOP_STORIES = 'RECEIVE_TOP_STORIES';
 
 export const receiveTopStories = stories => ({
-  type: RECIEVE_TOP_STORIES,
+  type: RECEIVE_TOP_STORIES,
   payload: {
     stories,
   },
