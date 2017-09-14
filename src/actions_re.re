@@ -1,5 +1,3 @@
-open Actions;
-
 type actionType =
   | ReceiveTopStories
   | RequestTopStories
