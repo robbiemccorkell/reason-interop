@@ -1,4 +1,4 @@
-open Jest;
+/* open Jest;
 
 describe
   "reducer"
@@ -14,7 +14,7 @@ describe
               "_type": "SOME_ACTION",
               "payload": {"stories": stories}
             };
-            let state = Reducer.reducer None action;
+            let state = Reducer.reducer action;
             expect state |> toEqual {"stories": stories}
           }
         );
@@ -27,7 +27,7 @@ describe
               "_type": "SOME_ACTION",
               "payload": {"stories": stories}
             };
-            let state = Reducer.reducer None action;
+            let state = Reducer.reducer action;
             expect state |> toEqual Reducer.initialState
           }
         );
@@ -43,9 +43,9 @@ describe
               "_type": "RECEIVE_TOP_STORIES",
               "payload": {"stories": stories}
             };
-            let state = Reducer.reducer (Some Reducer.initialState) action;
+            let state = Reducer.reducer state::Reducer.initialState action;
             expect state |> toEqual {"stories": stories}
           }
         )
     }
-  );
+  ); */
