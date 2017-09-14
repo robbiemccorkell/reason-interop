@@ -9,6 +9,18 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.(re|ml)$/,
+        use: {
+          loader: 'bs-loader',
+          options: {
+            module: 'es6',
+          },
+        },
+      },
     ],
+  },
+  resolve: {
+    extensions: ['.re', '.ml', '.js'],
   },
 };

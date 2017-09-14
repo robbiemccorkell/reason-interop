@@ -7,9 +7,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint --cache .",
-    "start": "bsb -make-world -w",
+    "start": "webpack -w",
     "build": "bsb -make-world",
-    "webpack": "webpack -w",
     "clean": "bsb -clean-world"
   },
   "keywords": [],
@@ -21,12 +20,8 @@
     ],
     "moduleFileExtensions": [
       "re",
-      "ml",
-      "web.js",
       "js",
-      "json",
-      "web.jsx",
-      "jsx"
+      "ml"
     ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest",

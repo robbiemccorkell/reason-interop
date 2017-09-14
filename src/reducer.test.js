@@ -1,4 +1,4 @@
-import reducer from './reducer';
+import reducer from './reducer.js';
 import { RECEIVE_TOP_STORIES } from './actions';
 
 describe('reducer', () => {
