@@ -15,7 +15,7 @@ describe
               "payload": {"stories": stories}
             };
             let state = Reducer.reducer Js.Nullable.undefined action;
-            expect state |> toEqual {"stories": stories}
+            expect state |> toEqual {"stories": stories, "loaded": Js.false_}
           }
         );
       test
@@ -44,7 +44,7 @@ describe
               "payload": {"stories": stories}
             };
             let state = Reducer.reducer (Js.Nullable.return Reducer.initialState) action;
-            expect state |> toEqual {"stories": stories}
+            expect state |> toEqual {"stories": stories, "loaded": Js.true_}
           }
         )
     }

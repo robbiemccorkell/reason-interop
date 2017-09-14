@@ -9,11 +9,22 @@ describe('App component', () => {
     const getTopStories = () => {};
 
     const result = shallow(
-      <App stories={stories} getTopStories={getTopStories} />,
+      <App stories={stories} loaded getTopStories={getTopStories} />,
     );
 
     expect(toJson(result)).toMatchSnapshot();
   });
+
+  it('renders loading message when not loaded', () => {
+    const getTopStories = () => {};
+
+    const result = shallow(
+      <App stories={[]} loaded={false} getTopStories={getTopStories} />,
+    );
+
+    expect(toJson(result)).toMatchSnapshot();
+  });
+
 
   it('renders stories', () => {
     const stories = [
@@ -23,7 +34,7 @@ describe('App component', () => {
     const getTopStories = () => {};
 
     const result = shallow(
-      <App stories={stories} getTopStories={getTopStories} />,
+      <App stories={stories} loaded getTopStories={getTopStories} />,
     );
 
     expect(result.find('ul').children().length).toEqual(stories.length);
@@ -34,7 +45,7 @@ describe('App component', () => {
     const getTopStories = jest.fn();
 
     shallow(
-      <App stories={stories} getTopStories={getTopStories} />,
+      <App stories={stories} loaded getTopStories={getTopStories} />,
       { lifecycleExperimental: true },
     );
 

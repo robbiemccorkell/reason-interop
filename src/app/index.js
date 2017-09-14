@@ -4,6 +4,7 @@ import { getTopStories } from '../actions';
 
 const mapStateToProps = state => ({
   stories: state.stories,
+  loaded: state.loaded,
 });
 
 const mapDispatchToProps = {

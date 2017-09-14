@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App component renders loading message when not loaded 1`] = `
+<div>
+  <Header>
+    Reason React Hacker News
+  </Header>
+  Loading...
+</div>
+`;
+
 exports[`App component renders stories 1`] = `
 <div>
   <Header>

@@ -7,6 +7,7 @@ const getStoryUrl = (id, url) =>
 
 class App extends Component {
   static propTypes = {
+    loaded: PropTypes.bool.isRequired,
     getTopStories: PropTypes.func.isRequired,
     stories: PropTypes.arrayOf(
       PropTypes.shape({
@@ -22,17 +23,20 @@ class App extends Component {
   }
 
   render() {
-    const { stories } = this.props;
+    const { stories, loaded } = this.props;
     return (
       <div>
         <Header>{'Reason React Hacker News'}</Header>
-        <ul>
-          {stories.map(({ id, title, url }) => (
-            <li key={id}>
-              <a href={getStoryUrl(id, url)}>{title}</a>
-            </li>
-          ))}
-        </ul>
+        {loaded ?
+          <ul>
+            {stories.map(({ id, title, url }) => (
+              <li key={id}>
+                <a href={getStoryUrl(id, url)}>{title}</a>
+              </li>
+            ))}
+          </ul> :
+          'Loading...'
+        }
       </div>
     );
   }
