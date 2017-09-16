@@ -13,14 +13,11 @@ let initialState: state = {"stories": [||], "loaded": Js.false_};
 let reducer state action => {
   let optionState = Js.Nullable.to_opt state;
   let actionType = decodeActionType action##_type;
-  switch optionState {
-  | Some state =>
-    switch actionType {
-    | ReceiveTopStories => {"stories": action##payload##stories, "loaded": Js.true_}
-    | RequestTopStories => {"stories": [||], "loaded": Js.false_}
-    | Other _ => state
-    }
-  | None => initialState
+  switch (optionState, actionType) {
+  | (Some _, ReceiveTopStories) => {"stories": action##payload##stories, "loaded": Js.true_}
+  | (Some _, RequestTopStories) => {"stories": [||], "loaded": Js.false_}
+  | (Some state, Other _) => state
+  | (None, _) => initialState
   }
 };
 
