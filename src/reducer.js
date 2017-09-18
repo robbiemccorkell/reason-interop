@@ -14,7 +14,6 @@ export default (state, action) => {
     case REQUEST_TOP_STORIES:
       return {
         ...state,
-        stories: action.payload.stories,
         loaded: false,
       };
     case RECEIVE_TOP_STORIES:
