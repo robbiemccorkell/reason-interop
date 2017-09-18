@@ -10,7 +10,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <App getState={store.getState} dispatch={store.dispatch} />
+    <App />
   </Provider>,
   document.getElementById('index'),
 );
