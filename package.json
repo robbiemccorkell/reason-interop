@@ -9,7 +9,7 @@
     "lint": "eslint --cache .",
     "start": "webpack -w",
     "watch": "bsb -make-world -w",
-    "build": "bsb -make-world",
+    "build": "bsb -make-world && yarn webpack",
     "clean": "bsb -clean-world"
   },
   "keywords": [],
@@ -60,6 +60,7 @@
     "eslint-plugin-react": "^7.3.0",
     "html-webpack-plugin": "^2.30.1",
     "react-test-renderer": "^15.6.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.6"
   }
 }

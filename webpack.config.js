@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -24,7 +25,12 @@ module.exports = {
   resolve: {
     extensions: ['.re', '.ml', '.js'],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.ejs',
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.ejs',
+    }),
+    new UglifyJSPlugin({
+      sourceMap: true,
+    }),
+  ],
 };
