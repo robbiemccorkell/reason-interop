@@ -8,6 +8,7 @@
     "test": "jest",
     "lint": "eslint --cache .",
     "start": "webpack -w",
+    "watch": "bsb -make-world -w",
     "build": "bsb -make-world",
     "clean": "bsb -clean-world"
   },
