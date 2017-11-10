@@ -1,10 +1,8 @@
-let component = ReasonReact.statelessComponent "Header";
+let component = ReasonReact.statelessComponent("Header");
 
-let make children => {
+let make = (children) => {
   ...component,
-  render: fun _self => <div> (ReasonReact.arrayToElement children) </div>
+  render: (_self) => <div> (ReasonReact.arrayToElement(children)) </div>
 };
 
-let comp =
-  ReasonReact.wrapReasonForJs
-    ::component (fun jsProps => make jsProps##children);
+let comp = ReasonReact.wrapReasonForJs(~component, (jsProps) => make(jsProps##children));
