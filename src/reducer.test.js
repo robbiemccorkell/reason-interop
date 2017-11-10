@@ -5,11 +5,12 @@ describe('reducer', () => {
   it('returns initial state when state is undefined', () => {
     const state = reducer();
 
-    expect(state).toEqual({ stories: [] });
+    expect(state).toEqual({ loaded: false, stories: [] });
   });
 
   it('returns current state if action unrecognised', () => {
     const initialState = {
+      loaded: true,
       stories: [{ id: 1 }],
     };
     const state = reducer(initialState, '');
@@ -30,6 +31,7 @@ describe('reducer', () => {
     });
 
     expect(state).toEqual({
+      loaded: true,
       stories: newStories,
     });
   });
